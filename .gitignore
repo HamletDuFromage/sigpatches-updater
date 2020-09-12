@@ -5,3 +5,4 @@ build/
 *.nacp
 *.nro
 sigpatches-updater/
+*.zip
