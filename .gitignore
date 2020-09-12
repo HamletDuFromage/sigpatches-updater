@@ -1,0 +1,7 @@
+build/
+.vscode/
+*.elf
+*.nrp
+*.nacp
+*.nro
+sigpatches-updater/
