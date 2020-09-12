@@ -5,4 +5,5 @@ build/
 *.nacp
 *.nro
 sigpatches-updater/
+switch/
 *.zip

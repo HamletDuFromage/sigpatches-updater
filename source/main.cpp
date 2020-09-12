@@ -32,6 +32,8 @@ int main(int argc, char* argv[]){
     bool downloaded = false;
     std::string results("");
     auto items = fetchLinks(SIGPATCHES_URL);
+    std::get<0>(items).push_back("Update the sigpatches-updater app");
+    std::get<1>(items).push_back(std::string(APP_URL));
     int nbItems = std::get<0>(items).size();
     if(nbItems == 0) menu = -1;
     while (appletMainLoop())
@@ -61,7 +63,7 @@ int main(int argc, char* argv[]){
             std::cout << "Press [B] go back to the main screen" << std::endl;
             std::cout << std::endl << std::endl;
 
-            std::cout << "The following sigpatches will be downloaded: " << std::endl;
+            std::cout << "The following package will be downloaded: " << std::endl;
             std::cout << prettifyString("Name:\n", "[1;36m") << std::get<0>(items)[cursor] << std::endl;
             std::cout << std::endl;
             std::cout <<  prettifyString("Download url:\n", "[1;36m")<< std::get<1>(items)[cursor] << std::endl;
@@ -75,12 +77,12 @@ int main(int argc, char* argv[]){
                 //if(1){
                 if(downloadFile(std::get<1>(items)[cursor].c_str(), SIGPATCHES_FILENAME, OFF)){
                     if(isArchive(SIGPATCHES_FILENAME)){
-                        if(extract(SIGPATCHES_FILENAME)) results += prettifyString("Successfully downloaded the sigpatches archive and successfully extracted them", "[1;32m");
-                        else results += "Could not extract the sigpatches archive.";
+                        if(extract(SIGPATCHES_FILENAME)) results += prettifyString("Successfully downloaded the archive and successfully extracted it", "[1;32m");
+                        else results += "Could not extract the archive.";
                     }
-                    else results += "The download link is broken. If the issue persists after a day, leave a comment on the Gbatemp thread or open an issue on github.com/HamletDuFromage/sigpatches-updater";
+                    else results += "The download link is broken. If the issue persists after a couple of hours, leave a comment on the Gbatemp thread or open an issue on github.com/HamletDuFromage/sigpatches-updater";
                 }
-                else results += "Couldn't download the sigpatches archive";
+                else results += "Couldn't download the archive";
                 downloaded = true;
             }
             std::cout << results << std::endl;

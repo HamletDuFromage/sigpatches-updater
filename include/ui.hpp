@@ -3,7 +3,7 @@
 #include <vector>
 #include <switch.h>
 
-#define VERSION "0.1"
+#define VERSION "0.2"
 
 #define WIDTH 80 // The width of the console
 #define HEIGHT 45 // Height of the console

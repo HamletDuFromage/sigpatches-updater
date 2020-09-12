@@ -13,7 +13,7 @@ A Nintendo Switch homebrew to fetch and extract the latest sigpatches
 
 ## FAQ
 
-### What are sigpatches
+### What are sigpatches?
 Sigpatches allow your Switch to install and run unofficial NSP file (digital titles that appear on the home menu). \
 Note that you must use CFW to launch these applications even after installation as sigpatches are always required to do so.
 

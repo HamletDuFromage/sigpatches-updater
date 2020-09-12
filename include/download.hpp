@@ -8,6 +8,8 @@
 #define DOWNLOAD_PATH "/config/sigpatches-updater/"
 #define SIGPATCHES_FILENAME "/config/sigpatches-updater/sigpatches.zip"
 
+#define APP_URL "https://github.com/HamletDuFromage/sigpatches-updater/releases/latest/download/sigpatches-updater.zip"
+
 
 #include <stdio.h>
 #include <stdbool.h>

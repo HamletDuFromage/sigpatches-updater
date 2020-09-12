@@ -2,6 +2,8 @@
 
 void displayList(std::vector<std::string> items, int cursor){
     for (int i = 0; i < (int) items.size(); i++){
+        
+        if(i == items.size() - 1 ) std::cout << std::endl;
         if(cursor == i) std::cout << prettifyString(">> ", "[1;36m");
         std::cout << "\033[1m" << items[i].substr(0, WIDTH - 4) << "\033[0m" << std::endl;
     }
