@@ -1,3 +1,6 @@
+# NOT SUPPORTED ANYMORE, USE THIS INSTEAD: https://github.com/HamletDuFromage/AIO-switch-updater
+While this app will still work, I recommend using AIO-switch-updater which adds QOL improvements such as not overwriting hekate_ipl etc
+
 # sigpatches-updater
 <p align="center">
 <img src = "https://user-images.githubusercontent.com/61667930/92999622-fe6c9700-f511-11ea-8092-e3df2bea6eb3.jpg"\><br>
